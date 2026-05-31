@@ -55,7 +55,8 @@ accordionButtons.forEach((button) => {
 
 function loadComments() {
   try {
-    const parsed = JSON.parse(localStorage.getItem(storageKey) || 'null');
+    const storedComments = localStorage.getItem(storageKey);
+    const parsed = storedComments ? JSON.parse(storedComments) : null;
     return Array.isArray(parsed) && parsed.length ? parsed : defaultComments;
   } catch {
     return defaultComments;
@@ -142,13 +143,13 @@ function buildCharts() {
     renderFallbackChart(
       fertilityCanvas,
       [
-        ['United States', 77, chartPalette.hearth],
-        ['France', 85, chartPalette.olive],
-        ['Hungary', 74, chartPalette.ember],
-        ['Japan', 60, chartPalette.hearth],
-        ['South Korea', 34, chartPalette.hearth]
+        ['United States · 1.62', 77, chartPalette.hearth],
+        ['France · 1.79', 85, chartPalette.olive],
+        ['Hungary · 1.55', 74, chartPalette.ember],
+        ['Japan · 1.26', 60, chartPalette.hearth],
+        ['South Korea · 0.72', 34, chartPalette.hearth]
       ],
-      'Replacement line ≈ 100'
+      'Bars are normalized so 100 represents replacement fertility (about 2.1 births per woman).'
     );
     return;
   }
