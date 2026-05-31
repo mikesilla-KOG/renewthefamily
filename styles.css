@@ -1,0 +1,303 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: radial-gradient(circle at top, rgba(232, 213, 163, 0.2), transparent 28%), linear-gradient(180deg, rgba(245, 237, 228, 0.82), rgba(250, 246, 240, 0.96));
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hero-section {
+  background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1800&q=80');
+  background-position: center;
+  background-size: cover;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.84);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: #e8d5a3;
+}
+
+.section-shell {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding: 5.5rem 1rem;
+}
+
+.section-contrast {
+  background: linear-gradient(180deg, rgba(232, 213, 163, 0.12), rgba(245, 237, 228, 0.7));
+  border-block: 1px solid rgba(47, 38, 35, 0.08);
+}
+
+.section-heading {
+  max-width: 52rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: #9c2f2f;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.1rem, 3vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.section-copy {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: rgba(47, 38, 35, 0.78);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.95rem 1.4rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  transform: translateY(-1px);
+}
+
+.feature-card,
+.blog-card,
+.issue-card,
+.callout-card {
+  border: 1px solid rgba(47, 38, 35, 0.08);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 1.5rem;
+  box-shadow: 0 18px 45px rgba(77, 46, 30, 0.08);
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2f2623;
+}
+
+.card-copy {
+  margin-top: 0.9rem;
+  color: rgba(47, 38, 35, 0.78);
+  line-height: 1.8;
+}
+
+.stat-pill {
+  display: inline-flex;
+  margin-top: 1rem;
+  border-radius: 9999px;
+  background: rgba(232, 213, 163, 0.45);
+  padding: 0.55rem 0.95rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #7a4937;
+}
+
+.chart-panel {
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(250, 246, 240, 0.98), rgba(245, 237, 228, 0.95));
+  padding: 1rem;
+  min-height: 20rem;
+}
+
+.data-card {
+  border-radius: 1.5rem;
+  background: #f5ede4;
+  padding: 1.2rem;
+}
+
+.data-number {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #9c2f2f;
+}
+
+.data-label,
+.list-space {
+  margin-top: 0.55rem;
+  color: rgba(47, 38, 35, 0.78);
+  line-height: 1.8;
+}
+
+.list-space {
+  padding-left: 1.1rem;
+}
+
+.list-space li + li {
+  margin-top: 0.5rem;
+}
+
+.issue-card {
+  padding-top: 1.75rem;
+}
+
+.issue-icon {
+  display: inline-flex;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: rgba(156, 47, 47, 0.1);
+  font-size: 1.4rem;
+}
+
+.accordion-toggle {
+  border-radius: 9999px;
+  background: #9c2f2f;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.9rem 1.2rem;
+}
+
+.policy-card {
+  border-radius: 1.3rem;
+  background: #f5ede4;
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(47, 38, 35, 0.84);
+}
+
+.blog-meta {
+  color: #9c2f2f;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.blog-link {
+  margin-top: 1rem;
+  display: inline-flex;
+  font-weight: 700;
+  color: #4a7043;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2f2623;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(47, 38, 35, 0.12);
+  background: #faf6f0;
+  padding: 0.9rem 1rem;
+  color: #2f2623;
+}
+
+.form-input:focus-visible {
+  outline: 2px solid rgba(156, 47, 47, 0.3);
+  outline-offset: 1px;
+}
+
+.comment-card {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(47, 38, 35, 0.08);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1.25rem;
+  box-shadow: 0 18px 35px rgba(77, 46, 30, 0.06);
+}
+
+.chart-fallback {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0.25rem;
+}
+
+.chart-fallback-row {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.chart-fallback-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.92rem;
+  color: rgba(47, 38, 35, 0.78);
+}
+
+.chart-fallback-track {
+  overflow: hidden;
+  border-radius: 9999px;
+  background: rgba(232, 213, 163, 0.35);
+  height: 0.9rem;
+}
+
+.chart-fallback-bar {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.share-pill {
+  display: inline-flex;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.7rem 1rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.share-pill:hover,
+.share-pill:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none !important;
+  }
+
+  .lg\:flex {
+    display: flex !important;
+  }
+
+  .section-shell {
+    padding-inline: 2rem;
+  }
+}
