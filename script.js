@@ -7,7 +7,12 @@ const commentsList = document.getElementById('comments-list');
 const clearCommentsButton = document.getElementById('clear-comments');
 const commentStatus = document.getElementById('comment-status');
 const storageKey = 'renew-the-family-comments';
-const allowedChartColors = new Set(['#9C2F2F', '#4A7043', '#7A4937']);
+const chartPalette = Object.freeze({
+  hearth: '#9C2F2F',
+  olive: '#4A7043',
+  ember: '#7A4937'
+});
+const allowedChartColors = new Set(Object.values(chartPalette));
 
 const defaultComments = [
   {
@@ -98,7 +103,7 @@ if (commentForm) {
       name: String(formData.get('name') || '').trim(),
       topic: String(formData.get('topic') || 'Discussion').trim(),
       message: String(formData.get('message') || '').trim(),
-      time: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
+      time: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
     };
 
     if (!comment.name || !comment.message) {
@@ -128,20 +133,20 @@ function buildCharts() {
     renderFallbackChart(
       familyOutcomesCanvas,
       [
-        ['Poverty exposure gap', 72, '#9C2F2F'],
-        ['School stability advantage', 64, '#4A7043'],
-        ['Behavioral risk reduction', 58, '#7A4937'],
-        ['Economic mobility lift', 74, '#4A7043']
+        ['Poverty exposure gap', 72, chartPalette.hearth],
+        ['School stability advantage', 64, chartPalette.olive],
+        ['Behavioral risk reduction', 58, chartPalette.ember],
+        ['Economic mobility lift', 74, chartPalette.olive]
       ]
     );
     renderFallbackChart(
       fertilityCanvas,
       [
-        ['United States', 77, '#9C2F2F'],
-        ['France', 85, '#4A7043'],
-        ['Hungary', 74, '#7A4937'],
-        ['Japan', 60, '#9C2F2F'],
-        ['South Korea', 34, '#9C2F2F']
+        ['United States', 77, chartPalette.hearth],
+        ['France', 85, chartPalette.olive],
+        ['Hungary', 74, chartPalette.ember],
+        ['Japan', 60, chartPalette.hearth],
+        ['South Korea', 34, chartPalette.hearth]
       ],
       'Replacement line ≈ 100'
     );
@@ -185,13 +190,13 @@ function buildCharts() {
           {
             label: 'Stable married biological home',
             data: [12, 16, 18, 74],
-            backgroundColor: '#4A7043',
+            backgroundColor: chartPalette.olive,
             borderRadius: 12
           },
           {
             label: 'Single-parent / disrupted home',
             data: [31, 29, 33, 46],
-            backgroundColor: '#9C2F2F',
+            backgroundColor: chartPalette.hearth,
             borderRadius: 12
           }
         ]
@@ -224,17 +229,17 @@ function buildCharts() {
           {
             label: 'Recent fertility rate',
             data: [1.62, 1.79, 1.55, 1.26, 0.72],
-            borderColor: '#9C2F2F',
+            borderColor: chartPalette.hearth,
             backgroundColor: 'rgba(156,47,47,0.14)',
             fill: true,
             tension: 0.35,
-            pointBackgroundColor: '#9C2F2F',
+            pointBackgroundColor: chartPalette.hearth,
             pointRadius: 5
           },
           {
             label: 'Replacement level',
             data: [2.1, 2.1, 2.1, 2.1, 2.1],
-            borderColor: '#4A7043',
+            borderColor: chartPalette.olive,
             borderDash: [7, 7],
             pointRadius: 0,
             tension: 0
@@ -263,30 +268,55 @@ function buildCharts() {
 
 function renderFallbackChart(canvas, rows, note = 'Fallback view shown while Chart.js is unavailable.') {
   if (!canvas?.parentElement) return;
-  canvas.parentElement.innerHTML = `
-    <div class="chart-fallback" role="img" aria-label="Static fallback chart">
-      ${rows
-        .map(
-          ([label, value, color]) => `
-            <div class="chart-fallback-row">
-              <div class="chart-fallback-labels">
-                <span>${escapeHtml(String(label))}</span>
-                <strong>${escapeHtml(String(value))}</strong>
-              </div>
-              <div class="chart-fallback-track">
-                <div class="chart-fallback-bar" style="width:${Math.max(0, Math.min(Number(value), 100))}%; background:${safeChartColor(color)};"></div>
-              </div>
-            </div>
-          `
-        )
-        .join('')}
-      <p class="text-sm leading-7 text-ink/60">${escapeHtml(note)}</p>
-    </div>
-  `;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'chart-fallback';
+  wrapper.setAttribute('role', 'img');
+  wrapper.setAttribute('aria-label', 'Static fallback chart');
+
+  rows.forEach(([label, value, color]) => {
+    const row = document.createElement('div');
+    row.className = 'chart-fallback-row';
+
+    const labels = document.createElement('div');
+    labels.className = 'chart-fallback-labels';
+
+    const labelText = document.createElement('span');
+    labelText.textContent = String(label);
+
+    const valueText = document.createElement('strong');
+    valueText.textContent = String(value);
+
+    labels.append(labelText, valueText);
+
+    const track = document.createElement('div');
+    track.className = 'chart-fallback-track';
+
+    const bar = document.createElement('div');
+    bar.className = 'chart-fallback-bar';
+    bar.style.width = `${safeChartPercent(value)}%`;
+    bar.style.background = safeChartColor(color);
+
+    track.appendChild(bar);
+    row.append(labels, track);
+    wrapper.appendChild(row);
+  });
+
+  const noteText = document.createElement('p');
+  noteText.className = 'text-sm leading-7 text-ink/60';
+  noteText.textContent = note;
+  wrapper.appendChild(noteText);
+
+  canvas.parentElement.replaceChildren(wrapper);
 }
 
 function safeChartColor(color) {
-  return allowedChartColors.has(color) ? color : '#7A4937';
+  return allowedChartColors.has(color) ? color : chartPalette.ember;
+}
+
+function safeChartPercent(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return 0;
+  return Math.max(0, Math.min(number, 100));
 }
 
 renderComments();

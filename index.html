@@ -446,11 +446,11 @@
             <form id="comment-form" class="mt-8 space-y-4 rounded-[2rem] bg-white p-6 shadow-glow">
               <div>
                 <label class="form-label" for="comment-name">Name</label>
-                <input class="form-input" id="comment-name" name="name" maxlength="40" required />
+                <input class="form-input" id="comment-name" name="name" maxlength="40" aria-describedby="comment-status" required />
               </div>
               <div>
                 <label class="form-label" for="comment-topic">Topic</label>
-                <select class="form-input" id="comment-topic" name="topic">
+                <select class="form-input" id="comment-topic" name="topic" aria-describedby="comment-status">
                   <option>Marriage</option>
                   <option>Parenthood</option>
                   <option>Fertility</option>
@@ -460,7 +460,7 @@
               </div>
               <div>
                 <label class="form-label" for="comment-message">Comment</label>
-                <textarea class="form-input min-h-36" id="comment-message" name="message" maxlength="400" required></textarea>
+                <textarea class="form-input min-h-36" id="comment-message" name="message" maxlength="400" aria-describedby="comment-status" required></textarea>
               </div>
               <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <p id="comment-status" class="text-sm text-ink/60">Share a constructive thought about family renewal.</p>
