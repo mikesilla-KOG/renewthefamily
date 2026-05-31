@@ -7,6 +7,7 @@ const commentsList = document.getElementById('comments-list');
 const clearCommentsButton = document.getElementById('clear-comments');
 const commentStatus = document.getElementById('comment-status');
 const storageKey = 'renew-the-family-comments';
+const allowedChartColors = new Set(['#9C2F2F', '#4A7043', '#7A4937']);
 
 const defaultComments = [
   {
@@ -273,7 +274,7 @@ function renderFallbackChart(canvas, rows, note = 'Fallback view shown while Cha
                 <strong>${escapeHtml(String(value))}</strong>
               </div>
               <div class="chart-fallback-track">
-                <div class="chart-fallback-bar" style="width:${Math.max(0, Math.min(Number(value), 100))}%; background:${color};"></div>
+                <div class="chart-fallback-bar" style="width:${Math.max(0, Math.min(Number(value), 100))}%; background:${safeChartColor(color)};"></div>
               </div>
             </div>
           `
@@ -282,6 +283,10 @@ function renderFallbackChart(canvas, rows, note = 'Fallback view shown while Cha
       <p class="text-sm leading-7 text-ink/60">${escapeHtml(note)}</p>
     </div>
   `;
+}
+
+function safeChartColor(color) {
+  return allowedChartColors.has(color) ? color : '#7A4937';
 }
 
 renderComments();
