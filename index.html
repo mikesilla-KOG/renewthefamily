@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renew the Family | Marriage. Children. Legacy.</title>
+    <meta
+      name="description"
+      content="Renew the Family is a warm, family-focused single-page site about marriage, children, legacy, family stability, and demographic renewal."
+    />
+    <meta
+      name="keywords"
+      content="renew the family, family renewal, nuclear family, marriage, children, legacy, pro family, fertility, traditional family"
+    />
+    <meta name="theme-color" content="#9C2F2F" />
+    <meta property="og:title" content="Renew the Family" />
+    <meta
+      property="og:description"
+      content="Marriage. Children. Legacy. A hopeful, data-rich home for family renewal and intergenerational flourishing."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:url" content="https://renewthefamily.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      if (window.tailwind) {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                hearth: '#9C2F2F',
+                gold: '#E8D5A3',
+                cream: '#F5EDE4',
+                parchment: '#FAF6F0',
+                olive: '#4A7043',
+                ink: '#2F2623',
+                ember: '#7A4937'
+              },
+              fontFamily: {
+                serif: ['Playfair Display', 'serif'],
+                sans: ['Inter', 'sans-serif']
+              },
+              boxShadow: {
+                glow: '0 18px 45px rgba(77, 46, 30, 0.15)'
+              }
+            }
+          }
+        };
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Renew the Family",
+        "url": "https://renewthefamily.com",
+        "description": "A family-focused site about marriage, children, legacy, and intergenerational renewal."
+      }
+    </script>
+  </head>
+  <body class="bg-parchment text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-ink/85 text-white backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#hero" class="flex items-center gap-3">
+          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-gold/20 text-xl">🏡</span>
+          <span>
+            <span class="block font-serif text-lg font-bold">Renew the Family</span>
+            <span class="block text-xs uppercase tracking-[0.3em] text-gold">Marriage. Children. Legacy.</span>
+          </span>
+        </a>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm font-semibold lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          Menu
+        </button>
+        <div class="hidden items-center gap-7 lg:flex">
+          <a class="nav-link" href="#why">Why Family Stability</a>
+          <a class="nav-link" href="#birth-rate">Birth Rate Crisis</a>
+          <a class="nav-link" href="#peril">Family in Peril</a>
+          <a class="nav-link" href="#solutions">Solutions</a>
+          <a class="nav-link" href="#blog">Blog</a>
+          <a class="rounded-full bg-hearth px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-hearth/30 transition hover:bg-ember" href="#discussion">Join the Conversation</a>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-4 lg:hidden">
+        <div class="flex flex-col gap-3 pt-4 text-sm">
+          <a class="nav-link" href="#why">Why Family Stability</a>
+          <a class="nav-link" href="#birth-rate">Birth Rate Crisis</a>
+          <a class="nav-link" href="#peril">Family in Peril</a>
+          <a class="nav-link" href="#solutions">Solutions</a>
+          <a class="nav-link" href="#blog">Blog</a>
+          <a class="rounded-full bg-hearth px-5 py-3 text-center font-semibold text-white" href="#discussion">Join the Conversation</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="hero"
+        class="hero-section relative isolate overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(22,16,14,0.78),rgba(156,47,47,0.52),rgba(74,112,67,0.35))]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(232,213,163,0.35),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(245,237,228,0.28),transparent_32%)]"></div>
+        <div class="relative mx-auto flex min-h-[calc(100vh-73px)] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
+          <div class="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+            <div class="max-w-3xl text-white">
+              <p class="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold tracking-[0.24em] text-gold">
+                Hearth &amp; Home Renewal
+              </p>
+              <h1 class="font-serif text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
+                Renew the Family
+              </h1>
+              <p class="mt-5 text-xl font-semibold text-gold sm:text-2xl">Marriage. Children. Legacy.</p>
+              <p class="mt-6 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl">
+                Rebuilding what society has broken—one marriage, one child, one generation at a time.
+                This project champions enduring commitment, child well-being, and a culture that makes room for strong homes to grow.
+              </p>
+              <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a class="hero-cta bg-hearth text-white hover:bg-ember" href="#why">Learn the Truth</a>
+                <a class="hero-cta bg-white/12 text-white hover:bg-white/20" href="#solutions">Start Your Family</a>
+                <a class="hero-cta border border-white/25 bg-transparent text-white hover:bg-white/10" href="#discussion">Join the Conversation</a>
+              </div>
+              <dl class="mt-12 grid gap-5 text-sm sm:grid-cols-3">
+                <div class="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                  <dt class="text-gold">Stable homes matter</dt>
+                  <dd class="mt-2 text-2xl font-bold">2-parent advantage</dd>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                  <dt class="text-gold">Fertility concern</dt>
+                  <dd class="mt-2 text-2xl font-bold">Below replacement</dd>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                  <dt class="text-gold">Cultural aim</dt>
+                  <dd class="mt-2 text-2xl font-bold">Legacy over drift</dd>
+                </div>
+              </dl>
+            </div>
+            <aside class="rounded-[2rem] border border-white/10 bg-white/12 p-4 shadow-glow backdrop-blur-lg">
+              <div class="overflow-hidden rounded-[1.6rem] bg-cream text-ink">
+                <img
+                  class="h-72 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80"
+                  alt="A smiling married couple with their children embracing outdoors at golden hour"
+                />
+                <div class="space-y-4 p-6">
+                  <p class="text-sm font-semibold uppercase tracking-[0.24em] text-hearth">Family renewal snapshot</p>
+                  <h2 class="font-serif text-3xl font-bold text-ink">Build the kind of home children can trust.</h2>
+                  <p class="text-sm leading-7 text-ink/80">
+                    Loving commitment, active fatherhood, devoted motherhood, and a culture of welcome for children create the soil in which future generations can flourish.
+                  </p>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-2xl bg-parchment p-4">
+                      <p class="text-xs uppercase tracking-[0.2em] text-hearth">Focus</p>
+                      <p class="mt-1 font-semibold">Marriage before drift</p>
+                    </div>
+                    <div class="rounded-2xl bg-parchment p-4">
+                      <p class="text-xs uppercase tracking-[0.2em] text-hearth">Future</p>
+                      <p class="mt-1 font-semibold">Children as blessing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Why the nuclear family succeeds</p>
+          <h2 class="section-title">When children grow up in stable, intact homes, the odds tilt toward flourishing.</h2>
+          <p class="section-copy">
+            Public data consistently shows that children tend to fare better when raised by their married parents in a stable household.
+            The goal here is not to demean anyone, but to spotlight the social conditions that most reliably protect children and strengthen communities.
+          </p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="feature-card">
+            <img
+              class="mb-5 h-52 w-full rounded-[1.5rem] object-cover"
+              src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=1200&q=80"
+              alt="Parents helping their children read together in a bright living room"
+            />
+            <h3 class="card-title">Education & stability</h3>
+            <p class="card-copy">Children in stable married homes often experience greater routine, higher school engagement, and stronger adult supervision.</p>
+            <p class="stat-pill">Selected benchmark: stronger graduation outcomes in intact households</p>
+          </article>
+          <article class="feature-card">
+            <img
+              class="mb-5 h-52 w-full rounded-[1.5rem] object-cover"
+              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80"
+              alt="A father and mother walking with their young children in a park at sunset"
+            />
+            <h3 class="card-title">Lower poverty risk</h3>
+            <p class="card-copy">Two committed parents sharing time, income, and care can provide resilience against economic shocks and household stress.</p>
+            <p class="stat-pill">Selected benchmark: lower poverty exposure for children in married-couple homes</p>
+          </article>
+          <article class="feature-card">
+            <img
+              class="mb-5 h-52 w-full rounded-[1.5rem] object-cover"
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80"
+              alt="A multigenerational family sharing a meal around a warmly lit table"
+            />
+            <h3 class="card-title">Emotional grounding</h3>
+            <p class="card-copy">Predictable affection, shared standards, and multi-generational belonging can support stronger mental and relational health.</p>
+            <p class="stat-pill">Selected benchmark: fewer adverse outcomes where family bonds stay intact</p>
+          </article>
+        </div>
+
+        <div class="mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div class="feature-card">
+            <p class="eyebrow">Interactive comparison</p>
+            <h3 class="card-title">Household structure and child outcomes</h3>
+            <p class="card-copy mb-6">Illustrative comparison using commonly reported patterns from major family and poverty datasets.</p>
+            <div class="chart-panel"><canvas id="familyOutcomesChart" aria-label="Comparison chart of selected child outcomes by household type"></canvas></div>
+          </div>
+          <div class="feature-card">
+            <p class="eyebrow">At-a-glance findings</p>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="data-card">
+                <span class="data-number">2x+</span>
+                <p class="data-label">Typical poverty risk gap between married-couple and single-parent households</p>
+              </div>
+              <div class="data-card">
+                <span class="data-number">↑</span>
+                <p class="data-label">Higher average school stability when children avoid repeated family disruption</p>
+              </div>
+              <div class="data-card">
+                <span class="data-number">↓</span>
+                <p class="data-label">Lower exposure to behavioral and stress-related risks in stable homes</p>
+              </div>
+              <div class="data-card">
+                <span class="data-number">Strong</span>
+                <p class="data-label">Intergenerational gains when children witness durable love, sacrifice, and responsibility</p>
+              </div>
+            </div>
+            <div class="mt-6 rounded-[1.5rem] bg-cream p-5 text-sm leading-7 text-ink/75">
+              <strong class="text-ink">Sources:</strong> U.S. Census Bureau, CDC/NCHS, Brookings, National Center for Education Statistics, OECD family indicators, and Institute for Family Studies summaries.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="birth-rate" class="section-shell section-contrast">
+        <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p class="eyebrow">The birth rate crisis</p>
+            <h2 class="section-title">Fertility collapse is not just a statistic—it is a question of whether the future will have enough families to carry it.</h2>
+            <p class="section-copy">
+              Across much of the developed world, births have fallen below replacement level. When marriage is delayed, housing is costly, work crowds out home life, and children are framed as burdens, societies age rapidly and lose confidence in tomorrow.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="callout-card">
+                <h3 class="card-title">Key pressures</h3>
+                <ul class="list-space">
+                  <li>Delayed marriage and extended adolescence</li>
+                  <li>High housing and childcare costs</li>
+                  <li>Career-first norms that crowd out family formation</li>
+                  <li>Low trust in lasting commitment</li>
+                </ul>
+              </div>
+              <div class="callout-card">
+                <h3 class="card-title">Clear call to action</h3>
+                <p class="card-copy">Marry young enough to grow together. Welcome children with courage. Build communities that make parenthood practical, honorable, and joyful.</p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card">
+            <p class="eyebrow">Interactive chart</p>
+            <h3 class="card-title">Selected fertility trends</h3>
+            <p class="card-copy mb-6">Replacement fertility is about 2.1 children per woman. Many modern societies now sit far below that line.</p>
+            <div class="chart-panel"><canvas id="fertilityChart" aria-label="Fertility chart showing selected country birth rates"></canvas></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="peril" class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">The family in peril</p>
+          <h2 class="section-title">Strong families face real pressures—from fatherlessness to isolation to institutions that often treat permanence as optional.</h2>
+          <p class="section-copy">
+            A healthy culture makes family formation easier, not harder. Below are major fault lines many communities now face and must address honestly if they want long-term renewal.
+          </p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <article class="issue-card">
+            <span class="issue-icon">👨‍👧</span>
+            <h3 class="card-title">Father abandonment</h3>
+            <p class="card-copy">Children need present, sacrificial fathers. Communities suffer when men are detached from marriage, work, and daily family life.</p>
+          </article>
+          <article class="issue-card">
+            <span class="issue-icon">⚖️</span>
+            <h3 class="card-title">Fragile commitment</h3>
+            <p class="card-copy">No-fault norms, low expectations, and constant exit language can weaken the seriousness of lifelong vows.</p>
+          </article>
+          <article class="issue-card">
+            <span class="issue-icon">🏙️</span>
+            <h3 class="card-title">Economic strain</h3>
+            <p class="card-copy">Housing, childcare, and healthcare burdens make family life feel unaffordable for young couples who want children.</p>
+          </article>
+          <article class="issue-card">
+            <span class="issue-icon">📱</span>
+            <h3 class="card-title">Cultural distraction</h3>
+            <p class="card-copy">Hyper-individualism and digital escapism can pull energy away from courtship, covenant, and generational responsibility.</p>
+          </article>
+        </div>
+
+        <div class="mt-8 rounded-[2rem] bg-cream p-6 shadow-glow sm:p-8">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="eyebrow">Expandable overview</p>
+              <h3 class="card-title">Open the conversation about family breakdown</h3>
+            </div>
+            <button class="accordion-toggle" type="button" data-target="peril-details" aria-expanded="false">Show details</button>
+          </div>
+          <div id="peril-details" class="accordion-panel hidden pt-6 text-sm leading-7 text-ink/80">
+            <p>
+              Renewal requires more than nostalgia. It means rebuilding trust between men and women, honoring motherhood and fatherhood, strengthening local institutions, and shaping policy around the needs of children rather than adult convenience alone.
+            </p>
+            <p class="mt-4">
+              The goal is a culture where commitment is credible, children are welcomed, fathers stay, mothers are supported, and marriage is treated as a cornerstone rather than a lifestyle accessory.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="solutions" class="section-shell section-contrast">
+        <div class="section-heading">
+          <p class="eyebrow">Solutions & call to multiply</p>
+          <h2 class="section-title">Practical steps can make family formation honorable, attainable, and joyful again.</h2>
+          <p class="section-copy">
+            Renewal begins with ordinary courage: forming households, keeping vows, welcoming children, and building local cultures that make those choices sustainable.
+          </p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="feature-card">
+              <h3 class="card-title">For couples</h3>
+              <ul class="list-space">
+                <li>Prepare for marriage with mentors and honest expectations.</li>
+                <li>Budget around a family vision, not only private consumption.</li>
+                <li>Create rhythms of prayer, meals, work, and shared responsibility.</li>
+                <li>Make room for children earlier where possible.</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3 class="card-title">For churches & communities</h3>
+              <ul class="list-space">
+                <li>Celebrate marriage and parenthood publicly.</li>
+                <li>Pair young families with older mentors.</li>
+                <li>Offer practical support: meals, babysitting, housing networks.</li>
+                <li>Teach boys and girls to become dependable men and women.</li>
+              </ul>
+            </article>
+            <article class="feature-card md:col-span-2">
+              <h3 class="card-title">Policy priorities</h3>
+              <div class="grid gap-4 sm:grid-cols-3">
+                <div class="policy-card">Tax and benefit structures that stop penalizing marriage and children</div>
+                <div class="policy-card">Housing, zoning, and wage conditions that let young families establish a home</div>
+                <div class="policy-card">Parental leave and local support structures that honor caregiving work</div>
+              </div>
+            </article>
+          </div>
+          <aside class="feature-card">
+            <img
+              class="mb-6 h-72 w-full rounded-[1.5rem] object-cover"
+              src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80"
+              alt="A married couple holding hands with their children in a sunlit field"
+            />
+            <p class="eyebrow">Success story</p>
+            <h3 class="card-title">A culture of welcome changes the math.</h3>
+            <p class="card-copy">
+              The strongest stories are not celebrity narratives but ordinary homes: couples who commit early, weather hardship together, welcome children, and become the dependable core of neighborhoods, churches, and schools.
+            </p>
+            <blockquote class="mt-6 rounded-[1.5rem] bg-cream p-5 text-sm italic leading-7 text-ink/80">
+              “The future belongs to the families who still believe sacrifice, faithfulness, and children are worth building a life around.”
+            </blockquote>
+          </aside>
+        </div>
+      </section>
+
+      <section id="blog" class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Blog & discussion</p>
+          <h2 class="section-title">Stories, arguments, and encouragement for people who want to rebuild a culture of family strength.</h2>
+          <p class="section-copy">These sample posts give the site immediate depth while leaving room for future publishing and real community discussion.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="blog-card">
+            <p class="blog-meta">Featured essay</p>
+            <h3 class="card-title">Why Fathers Matter</h3>
+            <p class="card-copy">A grounded look at how presence, discipline, and example from fathers shape security, identity, and resilience.</p>
+            <a class="blog-link" href="#discussion">Discuss this post →</a>
+          </article>
+          <article class="blog-card">
+            <p class="blog-meta">Culture & motherhood</p>
+            <h3 class="card-title">The Cost of Career-Only Scripts</h3>
+            <p class="card-copy">How prestige-driven adulthood can crowd out marriage, motherhood, and the deep fulfillment of family life.</p>
+            <a class="blog-link" href="#discussion">Discuss this post →</a>
+          </article>
+          <article class="blog-card">
+            <p class="blog-meta">Demography</p>
+            <h3 class="card-title">Restoring Fertility</h3>
+            <p class="card-copy">What policy, culture, and local support can do to help couples welcome children with confidence.</p>
+            <a class="blog-link" href="#discussion">Discuss this post →</a>
+          </article>
+          <article class="blog-card">
+            <p class="blog-meta">Marriage</p>
+            <h3 class="card-title">The Lie of Disposable Divorce</h3>
+            <p class="card-copy">Why lifelong vows matter for adults, children, and communities that need continuity more than novelty.</p>
+            <a class="blog-link" href="#discussion">Discuss this post →</a>
+          </article>
+          <article class="blog-card">
+            <p class="blog-meta">Legacy</p>
+            <h3 class="card-title">Building a Home With Grandchildren in Mind</h3>
+            <p class="card-copy">A meditation on inheritance, rituals, and building habits that bless generations you may never meet.</p>
+            <a class="blog-link" href="#discussion">Discuss this post →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="discussion" class="section-shell section-contrast">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <p class="eyebrow">Forum-style discussion</p>
+            <h2 class="section-title">Join the conversation</h2>
+            <p class="section-copy">
+              This demo discussion board stores comments in your browser using localStorage. It can later be replaced with Disqus, GitHub Discussions, or a custom backend.
+            </p>
+            <form id="comment-form" class="mt-8 space-y-4 rounded-[2rem] bg-white p-6 shadow-glow">
+              <div>
+                <label class="form-label" for="comment-name">Name</label>
+                <input class="form-input" id="comment-name" name="name" type="text" maxlength="40" autocomplete="name" aria-describedby="comment-status" required />
+              </div>
+              <div>
+                <label class="form-label" for="comment-topic">Topic</label>
+                <select class="form-input" id="comment-topic" name="topic" aria-describedby="comment-status">
+                  <option>Marriage</option>
+                  <option>Parenthood</option>
+                  <option>Fertility</option>
+                  <option>Policy</option>
+                  <option>Culture</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label" for="comment-message">Comment</label>
+                <textarea class="form-input min-h-36" id="comment-message" name="message" maxlength="400" aria-describedby="comment-status" required></textarea>
+              </div>
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p id="comment-status" class="text-sm text-ink/60">Share a constructive thought about family renewal.</p>
+                <button class="hero-cta bg-hearth text-white hover:bg-ember" type="submit">Post Comment</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="eyebrow">Community board</p>
+                <h3 class="card-title">Recent comments</h3>
+              </div>
+              <button id="clear-comments" type="button" class="rounded-full border border-hearth/20 px-4 py-2 text-sm font-semibold text-hearth transition hover:bg-hearth hover:text-white">Clear demo comments</button>
+            </div>
+            <div id="comments-list" class="mt-6 space-y-4"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-ink/10 bg-ink text-white">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
+        <div>
+          <h2 class="font-serif text-3xl font-bold">Renew the Family</h2>
+          <p class="mt-4 max-w-xl text-sm leading-7 text-white/75">
+            A respectful, persuasive family-renewal website centered on marriage, children, legacy, and the long view of civilization.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3 text-sm">
+            <a class="share-pill" href="https://twitter.com/intent/tweet?text=Renew%20the%20Family%20%E2%80%94%20Marriage.%20Children.%20Legacy.&url=https://renewthefamily.com" target="_blank" rel="noreferrer">Share on X</a>
+            <a class="share-pill" href="https://www.facebook.com/sharer/sharer.php?u=https://renewthefamily.com" target="_blank" rel="noreferrer">Share on Facebook</a>
+            <a class="share-pill" href="mailto:?subject=Renew%20the%20Family&body=https://renewthefamily.com">Email a friend</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-gold">Sources & citations</h3>
+          <ul class="mt-4 space-y-3 text-sm text-white/75">
+            <li>U.S. Census Bureau: child poverty and household structure</li>
+            <li>CDC / NCHS: fertility and birth trends</li>
+            <li>OECD family indicators and demographic reports</li>
+            <li>World Bank and UN population estimates</li>
+            <li>Brookings, IFS, and NCES syntheses on family stability</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-gold">Newsletter</h3>
+          <form class="mt-4 space-y-3">
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input id="newsletter-email" class="form-input border-white/10 bg-white/10 text-white placeholder:text-white/45" type="email" autocomplete="email" placeholder="Email address (placeholder)" />
+            <button type="button" class="hero-cta w-full bg-gold text-ink hover:bg-[#f0e2bd]">Subscribe</button>
+          </form>
+          <p class="mt-4 text-sm text-white/60">Contact: hello@renewthefamily.com</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
