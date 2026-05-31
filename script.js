@@ -31,8 +31,8 @@ const defaultComments = [
 
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('hidden');
-    menuToggle.setAttribute('aria-expanded', String(!open));
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!isHidden));
   });
 }
 
@@ -104,7 +104,7 @@ if (commentForm) {
       name: String(formData.get('name') || '').trim(),
       topic: String(formData.get('topic') || 'Discussion').trim(),
       message: String(formData.get('message') || '').trim(),
-      time: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      time: 'Today'
     };
 
     if (!comment.name || !comment.message) {

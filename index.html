@@ -446,7 +446,7 @@
             <form id="comment-form" class="mt-8 space-y-4 rounded-[2rem] bg-white p-6 shadow-glow">
               <div>
                 <label class="form-label" for="comment-name">Name</label>
-                <input class="form-input" id="comment-name" name="name" type="text" maxlength="40" aria-describedby="comment-status" required />
+                <input class="form-input" id="comment-name" name="name" type="text" maxlength="40" autocomplete="name" aria-describedby="comment-status" required />
               </div>
               <div>
                 <label class="form-label" for="comment-topic">Topic</label>
@@ -509,7 +509,7 @@
           <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-gold">Newsletter</h3>
           <form class="mt-4 space-y-3">
             <label class="sr-only" for="newsletter-email">Email address</label>
-            <input id="newsletter-email" class="form-input border-white/10 bg-white/10 text-white placeholder:text-white/45" type="email" placeholder="Email address (placeholder)" />
+            <input id="newsletter-email" class="form-input border-white/10 bg-white/10 text-white placeholder:text-white/45" type="email" autocomplete="email" placeholder="Email address (placeholder)" />
             <button type="button" class="hero-cta w-full bg-gold text-ink hover:bg-[#f0e2bd]">Subscribe</button>
           </form>
           <p class="mt-4 text-sm text-white/60">Contact: hello@renewthefamily.com</p>
